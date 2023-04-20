@@ -104,6 +104,45 @@
     .card.sold a {
         pointer-events: none;
     }
+
+    /* Button styles */
+    .button {
+    display: inline-block;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .button:hover {
+    background-color: #3e8e41;
+  }
+  
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .ver-trailer-btn {
+        background-color: #FFD700;
+        color: #000;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .contexto-btn {
+        background-color: #FF4500;
+        color: #FFF;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
     </style>
   </head>
   <body>
@@ -114,8 +153,11 @@
             <img src="https://img.youtube.com/vi/Wo9yT9DEvg8/mqdefault.jpg" alt="Requiem de Mozart 🥇">
             <h2>Sábado 22 abril 2023, 20:00</h2>
             <p>Requiem de Mozart 🥇</p>
-            <p><a href="https://www.youtube.com/watch?v=Wo9yT9DEvg8" target="_blank">Ver Trailer</a></p>
-            <p><a href="https://dancefromspain.feced.org/requiem/" target="_blank">Más información</a></p>
+            <div class="button-container">
+                <p><a href="https://www.youtube.com/watch?v=Wo9yT9DEvg8" target="_blank" class="button .ver-trailer-btn">Ver Trailer</a></p>
+                <p><a href="https://dancefromspain.feced.org/requiem/" target="_blank" class="button .contexto-btn">Más información</a></p>
+            </div>
+
         </div>
         </a>
         <a href="https://teatro.alcobendas.org/es/espectaculo/de-scheherezade" target="_blank">
@@ -123,7 +165,9 @@
             <img src="https://img.youtube.com/vi/KDCQqZ6ibaY/mqdefault.jpg" alt="De Scheherazade A Yo, Carmen 💃">
             <h2>Viernes 28 abril 2023, 20:00</h2>
             <p>De Scheherazade A Yo, Carmen 💃</p>
-            <p><a href="https://www.youtube.com/watch?v=KDCQqZ6ibaY" target="_blank">Ver Trailer</a></p>
+            <div class="button-container">
+                <p><a href="https://www.youtube.com/watch?v=KDCQqZ6ibaY" target="_blank" class="button .ver-trailer-btn">Ver Trailer</a></p>
+            </div>
         </div>
         </a>
         <a href="https://teatro.alcobendas.org/es/espectaculo/ladies-football-club" target="_blank">
@@ -131,8 +175,10 @@
             <img src="https://img.youtube.com/vi/VAmjfU4_WXE/mqdefault.jpg" alt="Ladies Football Club 👷‍♀️">
             <h2>Viernes 05 mayo 2023, 20:00</h2>
             <p>Ladies Football Club 👷‍♀️</p>
-            <p><a href="https://www.youtube.com/watch?v=VAmjfU4_WXE" target="_blank">Ver Trailer</a></p>
-            <p><a href="https://www.youtube.com/watch?v=FT7WEMb2PWM" target="_blank">Contexto</a></p>
+            <div class="button-container">
+                <p><a href="https://www.youtube.com/watch?v=VAmjfU4_WXE" target="_blank" class="button .ver-trailer-btn ">Ver Trailer</a></p>
+                <p><a href="https://www.youtube.com/watch?v=FT7WEMb2PWM" target="_blank" class="button .contexto-btn">Contexto</a></p>
+            </div>
         </div>
         </a>
         <a href="https://teatro.alcobendas.org/es/espectaculo/ladies-football-club" target="_blank">
@@ -140,7 +186,9 @@
             <img src="https://img.youtube.com/vi/HROHvtcgBIo/mqdefault.jpg" alt="Amistad 👫">
             <h2>Sabado 11 marzo 2023, 20:00</h2>
             <p>Amistad 👫</p>
-            <p><a href="https://www.youtube.com/watch?v=HROHvtcgBIo" target="_blank">Ver Trailer</a></p>
+            <div class="button-container">
+                <p><a href="https://www.youtube.com/watch?v=HROHvtcgBIo" target="_blank" class="button" .ver-trailer-btn>Ver Trailer</a></p>
+            </div>
         </div>
         </a>
     </div>
