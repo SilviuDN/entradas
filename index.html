@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="icon" type="image/png" href="https://pbs.twimg.com/profile_images/990844811426127873/f5HuhhMu_400x400.jpg">
     <title>EOI</title>
     <style>
+    :root {
+        --main-button-color: #4CAF50;
+        --main-button-hover-color: #3e8e41;
+    }
+
     /* Background image */
     body {
         background-image: url("https://www.civitatis.com/f/espana/cartagena/entrada-museo-teatro-romano-r32.jpg");
@@ -57,9 +63,9 @@
 
     @media only screen and (max-width: 700px) {
         p.special-instructions {
-            max-width: 90%;
-            text-align: center;
-            margin-right: auto;
+            max-width: 90% !important;
+            text-align: center !important;
+            margin-right: auto !important;
         }
     }
 
@@ -120,7 +126,7 @@
     padding: 8px 16px;
     border: none;
     border-radius: 4px;
-    background-color: #4CAF50;
+    background-color: var(--main-button-color);
     color: white;
     text-align: center;
     font-size: 16px;
@@ -129,7 +135,7 @@
   }
   
   .button:hover {
-    background-color: #3e8e41;
+    background-color: var(--main-button-hover-color);
   }
   
     .button-container {
@@ -139,14 +145,14 @@
     }
 
     .ver-trailer-btn {
-        background-color: #4CAF50;
+        /* background-color: var(--main-color); */
         color: #FFF;
         padding: 10px;
         border-radius: 5px;
     }
 
     .contexto-btn {
-        background-color: #4CAF50;
+        /* background-color: var(--main-color); */
         color: #FFF;
         padding: 10px;
         border-radius: 5px;
