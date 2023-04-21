@@ -180,7 +180,7 @@ background-color: var(--external-link-button-hover-color);
   .modal-content {
     display: block;
     margin: auto;
-    width: 100%;
+    width: 90%;
     height: 0;
     padding-bottom: 50%; /* 16:9 Aspect Ratio */
     position: relative;
@@ -212,6 +212,7 @@ background-color: var(--external-link-button-hover-color);
     float: right;
     font-size: 28px;
     font-weight: bold;
+    z-index: 100;
   }
   
   .close:hover,
