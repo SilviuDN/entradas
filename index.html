@@ -3,209 +3,65 @@
   <head>
     <link rel="icon" type="image/png" href="https://pbs.twimg.com/profile_images/990844811426127873/f5HuhhMu_400x400.jpg">
     <title>EOI</title>
-    <style>
-    :root {
-        --main-button-color: #4CAF50;
-        --main-button-hover-color: #3e8e41;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 
-    /* Background image */
-    body {
-        background-image: url("https://www.civitatis.com/f/espana/cartagena/entrada-museo-teatro-romano-r32.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        }
-
-    /* Card Styles */
-    .card {
-        background-color: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-        padding: 16px;
-        margin-bottom: 24px;
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .card:hover {
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-        transform: scale(1.05);
-    }
-
-    .card h2 {
-        font-size: 24px;
-        font-weight: 600;
-        margin-top: 0px;
-        margin-bottom: 8px;
-    }
-
-    .card p {
-        font-size: 16px;
-        margin-top: 0px;
-        margin-bottom: 8px;
-    }
-
-    p.special-instructions {
-        font-size: 16px;
-        font-weight: 600;
-        margin-top: 16px;
-        margin-bottom: 8px;
-        padding: 20px 0;
-        color: #4CAF50;
-        background-color: rgba(221,241,253,0.7);
-        margin: 0 auto;
-        max-width: 50%;
-        text-align: right;
-        margin-right: 0;
-    }
-
-    @media only screen and (max-width: 700px) {
-        p.special-instructions {
-            max-width: 90% !important;
-            text-align: center !important;
-            margin-right: auto !important;
-        }
-    }
-
-    .card img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 16px;
-    }
-
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    /* Card Grid Styles */
-    .card-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-
-    /* Disabled Card Styles */
-    .card.sold {
-        opacity: 0.7;
-        position: relative;
-    }
-
-    .card.sold::before {
-        content: "NO DISPONIBLE";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        color: white;
-        background-color: red;
-        font-size: 24px;
-        font-weight: bold;
-        padding: 8px;
-        transform: rotate(-45deg);
-        transform-origin: bottom left;
-    }
-
-    .card.sold:hover {
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    }
-
-    .card.sold:hover::before {
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    }
-
-    .card.sold a {
-        pointer-events: none;
-    }
-
-    /* Button styles */
-    .button {
-    display: inline-block;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    background-color: var(--main-button-color);
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  .button:hover {
-    background-color: var(--main-button-hover-color);
-  }
-  
-    .button-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .ver-trailer-btn {
-        /* background-color: var(--main-color); */
-        color: #FFF;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    .contexto-btn {
-        /* background-color: var(--main-color); */
-        color: #FFF;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    </style>
   </head>
   <body>
     <p class="special-instructions">¡Hola! Si algún espectáculo te llama la atención, no dice 'No disponible' y te gustaría asistir, envíame un mensaje por WhatsApp y estaré encantado de enviarte la invitación.</p>
+
     <div class="card-grid">
-        <a href="https://teatro.alcobendas.org/es/espectaculo/requiem-de-mozart" target="_blank">
         <div class="card">
             <img src="https://img.youtube.com/vi/Wo9yT9DEvg8/mqdefault.jpg" alt="Requiem de Mozart 🥇">
             <h2>Sábado 22 abril 2023, 20:00</h2>
             <p>Requiem de Mozart 🥇</p>
             <div class="button-container">
-                <p><a href="https://www.youtube.com/watch?v=Wo9yT9DEvg8" target="_blank" class="button ver-trailer-btn">Ver Trailer</a></p>
+                <!-- button to https://www.youtube.com/watch?v=Wo9yT9DEvg8 -->
+                <p><button class="button ver-trailer-btn" data-video-id="Wo9yT9DEvg8">Ver Trailer</button></p> 
                 <p><a href="https://dancefromspain.feced.org/requiem/" target="_blank" class="button contexto-btn">Más información</a></p>
             </div>
 
         </div>
-        </a>
-        <a href="https://teatro.alcobendas.org/es/espectaculo/de-scheherezade" target="_blank">
         <div class="card">
             <img src="https://img.youtube.com/vi/KDCQqZ6ibaY/mqdefault.jpg" alt="De Scheherazade A Yo, Carmen 💃">
             <h2>Viernes 28 abril 2023, 20:00</h2>
             <p>De Scheherazade A Yo, Carmen 💃</p>
             <div class="button-container">
-                <p><a href="https://www.youtube.com/watch?v=KDCQqZ6ibaY" target="_blank" class="button ver-trailer-btn">Ver Trailer</a></p>
+                <!-- button to https://www.youtube.com/watch?v=KDCQqZ6ibaY -->
+                <p><button class="button ver-trailer-btn" data-video-id="KDCQqZ6ibaY">Ver Trailer</button></p>
             </div>
         </div>
-        </a>
-        <a href="https://teatro.alcobendas.org/es/espectaculo/ladies-football-club" target="_blank">
         <div class="card">
             <img src="https://img.youtube.com/vi/VAmjfU4_WXE/mqdefault.jpg" alt="Ladies Football Club 👷‍♀️">
             <h2>Viernes 05 mayo 2023, 20:00</h2>
             <p>Ladies Football Club 👷‍♀️</p>
             <div class="button-container">
-                <p><a href="https://www.youtube.com/watch?v=VAmjfU4_WXE" target="_blank" class="button ver-trailer-btn ">Ver Trailer</a></p>
-                <p><a href="https://www.youtube.com/watch?v=FT7WEMb2PWM" target="_blank" class="button contexto-btn">Contexto</a></p>
+                <!-- button to https://www.youtube.com/watch?v=VAmjfU4_WXE -->
+                <p><button class="button ver-trailer-btn" data-video-id="VAmjfU4_WXE">Ver Trailer</button></p>
+                <!-- button to https://www.youtube.com/watch?v=FT7WEMb2PWM -->
+                <p><button class="button ver-trailer-btn" data-video-id="FT7WEMb2PWM">Ver Contexto</button></p>
             </div>
         </div>
-        </a>
-        <a href="https://teatro.alcobendas.org/es/espectaculo/ladies-football-club" target="_blank">
         <div class="card sold">
             <img src="https://img.youtube.com/vi/HROHvtcgBIo/mqdefault.jpg" alt="Amistad 👫">
             <h2>Sabado 11 marzo 2023, 20:00</h2>
             <p>Amistad 👫</p>
             <div class="button-container">
-                <p><a href="https://www.youtube.com/watch?v=HROHvtcgBIo" target="_blank" class="button ver-trailer-btn">Ver Trailer</a></p>
+                <p><button class="button ver-trailer-btn" data-video-id="HROHvtcgBIo">Ver Trailer</button></p>
             </div>
         </div>
-        </a>
+        
     </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="video-player" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    
+    <script src="./script.js"></script>
+
   </body>
 </html>
