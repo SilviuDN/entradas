@@ -1,6 +1,10 @@
 :root {
     --main-button-color: #4CAF50;
     --main-button-hover-color: #3e8e41;
+    /* --external-link-button-color: #FF5722; */
+    --external-link-button-color: #9C27B0;
+    --external-link-button-hover-color: #6A1B9A;
+    --alert-color: #FF4081; 
 }
 
 /* Background image */
@@ -47,7 +51,7 @@ p.special-instructions {
     margin-top: 16px;
     margin-bottom: 8px;
     padding: 20px 0;
-    color: #4CAF50;
+    color: var(--alert-color);
     background-color: rgba(221,241,253,0.7);
     margin: 0 auto;
     max-width: 50%;
@@ -152,6 +156,14 @@ background-color: var(--main-button-hover-color);
     border-radius: 5px;
 }
 
+.external{
+    background-color: var(--external-link-button-color);
+}
+
+.external:hover {
+background-color: var(--external-link-button-hover-color);
+}
+
 /* Modal Styles */
 #modal {
     display: none;
@@ -204,6 +216,52 @@ background-color: var(--main-button-hover-color);
   
   .close:hover,
   .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/* Info Modal Styles */
+#info-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+  }
+  
+  .info-modal-content {
+    display: block;
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+  }
+  
+  .info-modal-content iframe {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .close-2 {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .close-2:hover,
+  .close-2:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;

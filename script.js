@@ -17,10 +17,33 @@ closeModalButton.addEventListener("click", function() {
   videoPlayer.src = "";
 });
 
+// MODAL-2
+const moreInfoButtons = document.querySelectorAll(".embbedInModal");
+const infoModal = document.querySelector("#info-modal");
+const infoModalContent = document.querySelector(".info-modal-content");
+const closeModalButton2 = document.querySelector(".close-2");
+
+moreInfoButtons.forEach(button => {
+  button.addEventListener("click", function() {
+    const url = this.dataset.pageUrl;
+    infoModalContent.innerHTML = `<iframe src="${url}"></iframe>`;
+    infoModal.style.display = "block";
+  });
+});
+
+closeModalButton2.addEventListener("click", function() {
+  infoModal.style.display = "none";
+  infoModalContent.innerHTML = "";
+});
+
 window.addEventListener("click", function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
     videoPlayer.src = "";
+  }
+  if (event.target == infoModal) {
+    infoModal.style.display = "none";
+    infoModalContent.innerHTML = "";
   }
 });
 

@@ -18,10 +18,13 @@
             <div class="button-container">
                 <!-- button to https://www.youtube.com/watch?v=Wo9yT9DEvg8 -->
                 <p><button class="button ver-trailer-btn" data-video-id="Wo9yT9DEvg8">Ver Trailer</button></p> 
-                <p><a href="https://dancefromspain.feced.org/requiem/" target="_blank" class="button contexto-btn">Más información</a></p>
+                <p><button class="button contexto-btn embbedInModal" data-page-url="https://dancefromspain.feced.org/requiem/">Más información</button></p>
             </div>
-
+            <div class="button-container">
+                <a href="https://teatro.alcobendas.org/es/espectaculo/requiem-de-mozart" target="_blank"><button class="button contexto-btn external" >Ir a la página oficial</button></a>   
+            </div>
         </div>
+
         <div class="card">
             <img src="https://img.youtube.com/vi/KDCQqZ6ibaY/mqdefault.jpg" alt="De Scheherazade A Yo, Carmen 💃">
             <h2>Viernes 28 abril 2023, 20:00</h2>
@@ -29,6 +32,13 @@
             <div class="button-container">
                 <!-- button to https://www.youtube.com/watch?v=KDCQqZ6ibaY -->
                 <p><button class="button ver-trailer-btn" data-video-id="KDCQqZ6ibaY">Ver Trailer</button></p>
+                <p><button class="button contexto-btn embbedInModal" 
+                    data-page-url="https://centrocoreograficomariapages.org/espectaculo/de-scheherezade/">Más información
+                </button></p>
+            </div>
+            <div class="button-container">
+                <a href="https://teatro.alcobendas.org/es/espectaculo/de-scheherezade" target="_blank">
+                    <button class="button contexto-btn external" >Ir a la página oficial</button></a>
             </div>
         </div>
         <div class="card">
@@ -41,6 +51,9 @@
                 <!-- button to https://www.youtube.com/watch?v=FT7WEMb2PWM -->
                 <p><button class="button ver-trailer-btn" data-video-id="FT7WEMb2PWM">Ver Contexto</button></p>
             </div>
+            <div class="button-container">
+                <a href="https://teatro.alcobendas.org/es/espectaculo/ladies-football-club" target="_blank"><button class="button contexto-btn external" >Ir a la página oficial</button></a>
+            </div>
         </div>
         <div class="card sold">
             <img src="https://img.youtube.com/vi/HROHvtcgBIo/mqdefault.jpg" alt="Amistad 👫">
@@ -49,14 +62,25 @@
             <div class="button-container">
                 <p><button class="button ver-trailer-btn" data-video-id="HROHvtcgBIo">Ver Trailer</button></p>
             </div>
+            <div class="button-container">
+            </div>
         </div>
         
     </div>
 
+
+    <!-- MODALS: -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <iframe id="video-player" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="info-modal" class="modal">
+        <div class="info-modal-content">
+            <span class="close-2">&times;</span>
+            <iframe id="info-page" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
     </div>
 
